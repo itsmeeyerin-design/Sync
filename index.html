@@ -130,10 +130,8 @@ yesBtn.addEventListener("click", () => {
 
   // 첫 번째 클릭
   if(confirmStep === 0){
-    if (result){
-      result.style.display = "block";
-      result.textContent = "정말로 탈퇴하시겠습니까?";
-    }
+
+    title.textContent = "정말로 탈퇴하시겠습니까?";
 
     confirmStep++;
     return;
@@ -141,15 +139,14 @@ yesBtn.addEventListener("click", () => {
 
   // 두 번째 클릭
   if(confirmStep === 1){
+
     document.body.style.backgroundImage =
       'linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("02.jpg")';
 
-    if (result){
-      result.textContent = "탈퇴가 완료되었습니다.";
-    }
+    title.textContent = "탈퇴가 완료되었습니다.";
+
   }
 });
-
   yesBtn.addEventListener("click", () => {
     document.body.style.backgroundImage =
       'linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("02.jpg")';
